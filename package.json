@@ -1,0 +1,40 @@
+{
+  "name": "movie-recommender-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:ts": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lint:ts:fix": "npm run lint:ts -- --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.22.0",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.15.1",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "net": "^1.0.2",
+    "nuxt": "^2.15.7",
+    "nuxt-buefy": "^0.4.8",
+    "nuxt-property-decorator": "^2.9.1",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.10.3",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "prettier": "^2.3.2"
+  }
+}
