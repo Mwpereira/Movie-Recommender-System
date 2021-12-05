@@ -2,7 +2,7 @@
   <section class='section'>
     <section class='has-text-centered'>
       <h1 class='title'>Movie Recommender System</h1>
-      <h2 class='is-size-5'>Completed By: Michael Pereira, Hitarth Chudgar, and </h2>
+      <h2 class='is-size-5'>Completed By: Michael Pereira, Hitarth Chudgar, and Dhanayush Raninga</h2>
     </section>
     <section class='my-5'>
       <h3 class='is-size-5 has-text-weight-semibold mb-4'>Instructions</h3>

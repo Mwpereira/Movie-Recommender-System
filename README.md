@@ -2,7 +2,7 @@
 
 - Michael Pereira (500896409)
 - Hitarth Chudgar (500888845)
-- ()
+- Dhanayush Raninga (500967245)
 
 # 🍿🎞️ Movie Recommender System
 
