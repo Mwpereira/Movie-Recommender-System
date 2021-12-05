@@ -8,7 +8,7 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 
 @Component
-export default class Search extends Vue {
+export default class Calculate extends Vue {
 
 }
 </script>

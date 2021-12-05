@@ -9,9 +9,12 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+// ===================================================================================================================
 /**
  * Will use localstorage as our mock database to store user data
  */
+// ===================================================================================================================
+
 app.post('/register', async (req, res) => {
   try {
     if (req.body.username < 3) {
