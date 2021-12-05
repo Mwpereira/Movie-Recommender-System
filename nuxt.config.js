@@ -2,18 +2,18 @@ export default {
   ssr: false,
   target: 'universal',
   head: {
-    title: 'Vector Space Model',
+    title: 'Movie Recommender System',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Inverted Index' },
+      { hid: 'description', name: 'description', content: 'Movie Recommender System' },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'inverted_index, mwpereira'
+        content: 'movie recommender system'
       },
       { hid: 'og:title', name: 'og:title', content: 'Inverted Index' },
       { hid: 'og:description', name: 'og:description', content: 'Inverted Index' },
