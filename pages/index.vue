@@ -6,10 +6,18 @@
     </section>
     <section class='my-5'>
       <h3 class='is-size-5 has-text-weight-semibold mb-4'>Instructions</h3>
-      <p class='mb-1'>1. Please create an account on our <NuxtLink to="/register">Register page</NuxtLink> to store your db.</p>
-      <p class='mb-1'>2. Once you have registered, use our <NuxtLink to="/login">Login page</NuxtLink> to be authorized.</p>
-      <p class='mb-1'>3. When you have signed in, browser through available movies and give them a rating from 0 to 5.</p>
-      <p class='mb-1'>4. Whenever you feel so, feel free to click the <i>Calculate</i> button to compute the item-based compatibility filter.</p>
+      <p class='mb-1'>1. Please create an account on our
+        <NuxtLink to="/register">Register page</NuxtLink>
+        to store your db.
+      </p>
+      <p class='mb-1'>2. Once you have registered, use our
+        <NuxtLink to="/login">Login page</NuxtLink>
+        to be authorized.
+      </p>
+      <p class='mb-1'>3. When you have signed in, browser through available movies and give them a rating from 0 to
+        5.</p>
+      <p class='mb-1'>4. Whenever you feel so, feel free to click the <i>Calculate</i> button to compute the item-based
+        compatibility filter.</p>
       <section class="mt-5">
         <p class="is-underlined mb-2">Notice</p>
         <p>Data is stored within the browser's local storage.</p>
@@ -23,7 +31,6 @@
 
 <script lang='ts'>
 import {Component, Vue} from 'nuxt-property-decorator'
-import axios from 'axios'
 import BuefyService from '~/services/buefy-service'
 import WebStorage from "~/services/WebStorage";
 

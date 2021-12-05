@@ -1,8 +1,6 @@
 <template>
   <section class='section'>
-    <TopSection/>
-    <section class='my-5'>
-    </section>
+
   </section>
 </template>
 

@@ -1,8 +1,6 @@
 <template>
   <section>
-    <section class='my-5'>
-      <p>Test</p>
-    </section>
+
   </section>
 </template>
 
