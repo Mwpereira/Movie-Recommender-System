@@ -32,12 +32,12 @@
 <script lang='ts'>
 import {Component, Vue} from 'nuxt-property-decorator'
 import BuefyService from '~/services/buefy-service'
-import WebStorage from "~/services/WebStorage";
+import WebStorageService from "~/services/web-storage-service";
 
 @Component
 export default class Index extends Vue {
   private clearLs(): void {
-    WebStorage.deleteAllData()
+    WebStorageService.deleteAllData()
     BuefyService.successToast('All cache has been deleted')
   }
 }

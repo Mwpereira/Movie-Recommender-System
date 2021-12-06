@@ -8,7 +8,7 @@
       </template>
       <template #end>
         <b-navbar-item class='mr-4 navOptions'>
-          <NuxtLink to="/">
+          <NuxtLink to="/dashboard">
             Dashboard
           </NuxtLink>
         </b-navbar-item>
@@ -21,7 +21,7 @@
 
         <b-navbar-item class='mr-4 navOptions'>
           <NuxtLink to="/calculate">
-            Item/User CF
+            User CF
           </NuxtLink>
         </b-navbar-item>
         <b-navbar-item class='mr-4 navOptions'>
@@ -37,7 +37,7 @@
 
 <script lang='ts'>
 import {Component, Vue} from 'nuxt-property-decorator'
-import WebStorage from "~/services/WebStorage";
+import WebStorageService from "~/services/web-storage-service";
 import BuefyService from "~/services/buefy-service";
 
 @Component
@@ -47,7 +47,7 @@ export default class TopSection extends Vue {
   }
 
   private logout(): void {
-    WebStorage.logoutUser()
+    WebStorageService.logoutUser()
     BuefyService.successToast('Signed out')
     this.$router.push('/')
   }

@@ -1,9 +1,9 @@
 /**
  * Contains methods for creating/updating/removing data from the user's local storage
  */
-export default class WebStorage {
-  private static lsKey = "movieRecommenderSystem";
-  private static ssKey = "movieRecommenderSystem";
+export default class WebStorageService {
+  private static lsKey = 'movieRecommenderSystem'
+  private static ssKey = 'movieRecommenderSystem'
 
   // =================================================================================================================
   /**

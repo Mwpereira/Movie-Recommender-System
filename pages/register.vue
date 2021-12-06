@@ -38,7 +38,7 @@
 import {Component, Vue} from 'nuxt-property-decorator'
 import axios from 'axios'
 import BuefyService from '~/services/buefy-service'
-import WebStorage from '~/services/WebStorage';
+import WebStorageService from '~/services/web-storage-service';
 
 @Component
 export default class Register extends Vue {
@@ -51,9 +51,9 @@ export default class Register extends Vue {
     await axios.post('/register', {
       username: this.username,
       password: this.password,
-      db: WebStorage.checkForData()
+      db: WebStorageService.checkForData()
     }).then(response => {
-      WebStorage.updateData(response.data.db)
+      WebStorageService.updateData(response.data.db)
       BuefyService.successToast('User Created')
       this.$router.push('/login')
     }).catch(error => {
@@ -67,7 +67,7 @@ export default class Register extends Vue {
   }
 
   mounted() {
-    if (WebStorage.getCurrentAuthorizedUser() !== null) {
+    if (WebStorageService.getCurrentAuthorizedUser() !== null) {
       this.$router.push('/dashboard')
     }
   }
