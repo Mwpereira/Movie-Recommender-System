@@ -210,7 +210,6 @@ export default class RecommenderSystemService {
     let sum = 0
     let mult = 0
     for (let i = 0; i < similarityScoreRanking.length; i++) {
-      // 1 / (usr sim )
       sum += similarityScoreRanking[i].score
       mult +=
         similarityScoreRanking[i].score *
