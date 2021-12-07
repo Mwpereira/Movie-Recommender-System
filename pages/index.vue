@@ -14,9 +14,9 @@
         <NuxtLink to="/login">Login page</NuxtLink>
         to be authorized.
       </p>
-      <p class='mb-1'>3. When you have signed in, browser through available movies and give them a rating from 0 to
+      <p class='mb-1'>3. When you have signed in, browser through available movies and give them a rating from 1 to
         5.</p>
-      <p class='mb-1'>4. Whenever you feel so, feel free to click the <i>Calculate</i> button to compute the item-based
+      <p class='mb-1'>4. Whenever you feel so, feel free to click the <i>Calculate</i> button to compute the user-based
         compatibility filter.</p>
       <section class="mt-5">
         <p class="is-underlined mb-2">Notice</p>
