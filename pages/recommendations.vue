@@ -44,7 +44,9 @@ export default class Recommendations extends Vue {
     const finalRecommendations: any[] = [];
     for (let i = 0; i < result.recommendedMovies.length; i++) {
       finalRecommendations.push({
+        // @ts-ignore
         id: Object.values(this.recommendations)[i].id,
+        // @ts-ignore
         score: Object.values(this.recommendations)[i].score.toFixed(2),
       })
     }
