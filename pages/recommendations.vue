@@ -2,8 +2,8 @@
   <section class="section">
     <section class="box">
       <h1 class="title mb-6">Recommended Films:</h1>
-      <div class="columns has-text-centered">
-        <div v-for="movie in recommendations" :key="movie" class="column">
+      <div class="columns has-text-centered is-centered is-multiline">
+        <div v-for="movie in recommendations" :key="movie" class="column is-2">
           <img :src="moviesImgUrls[movie.id]" width="300px" height="500px" :alt="movies[movie.id]"/>
           <h2 class="title is-size-5 m-6">{{ movies[movie] }}</h2>
           <p class="mt-6 mb-5 has-text-weight-semibold has-text-centered">

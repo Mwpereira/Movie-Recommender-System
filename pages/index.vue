@@ -8,16 +8,17 @@
       <h3 class='is-size-5 has-text-weight-semibold mb-4'>Instructions</h3>
       <p class='mb-1'>1. Please create an account on our
         <NuxtLink to="/register">Register page</NuxtLink>
-        to store your db.
+        to store your data.
       </p>
       <p class='mb-1'>2. Once you have registered, use our
         <NuxtLink to="/login">Login page</NuxtLink>
         to be authorized.
       </p>
-      <p class='mb-1'>3. When you have signed in, browser through available movies and give them a rating from 1 to
+      <p class='mb-1'>3. When you have signed in, browse through the available movies to rate and give them a rating
+        from 1 to
         5.</p>
-      <p class='mb-1'>4. Whenever you feel so, feel free to click the <i>Calculate</i> button to compute the user-based
-        compatibility filter.</p>
+      <p class='mb-1'>4. When you have completed rating the movies, feel free to navigate to the <i>Recommendations</i>
+        page to receive <br/> your movie recommendations based off of the user-based compatibility filter scores.</p>
       <section class="mt-5">
         <p class="is-underlined mb-2">Notice</p>
         <p>Data is stored within the browser's local storage.</p>

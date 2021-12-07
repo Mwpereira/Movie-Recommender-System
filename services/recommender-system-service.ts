@@ -28,7 +28,7 @@ export default class RecommenderSystemService {
     Hitarth: [0, 5, 5, 5, 4, 5, 0, 2, 3, 4, 5, 4, 4, 5, 3, 4, 4, 2],
     Michael: [5, 4, 5, 5, 5, 4, 0, 4, 3, 5, 2, 5, 5, 4, 5, 4, 5, 5],
     Peter: [4, 4, 0, 4, 5, 4, 3, 4, 2, 3, 4, 4, 0, 5, 4, 1, 4, 5],
-    Steve: [5, 4, 5, 4, 4, 5, 0, 3, 2, 2, 4, 3, 2, 4, 3, 0, 3, 4, 4],
+    Steve: [5, 4, 5, 4, 4, 5, 0, 3, 2, 2, 4, 3, 2, 4, 3, 0, 3, 4],
   }
 
   // Mapping of transformed the ratings' data
@@ -150,8 +150,6 @@ export default class RecommenderSystemService {
             // Add the movie rating if they have seen the movie
             averageR += tempRandomUsersRatings[j]
             averageC += tempCurrentUsersRatings[j]
-            console.log(tempCurrentUsersRatings)
-            console.log(tempCurrentUsersRatings[j])
           }
           // Last value in the ratings array
           if (j === tempRandomUsersRatings.length - 1) {
@@ -261,8 +259,8 @@ export default class RecommenderSystemService {
         }
         const predictedMovieScore = parseFloat(((1 / sum) * mult).toFixed(3))
 
-        // Must be greater than 3 (a rating of 3-5 means the user likes the movie, therefore is a recommendation)
-        if (predictedMovieScore > 3) {
+        // Must be greater than 3.5 (a rating of 3.5-5 means the user likes the movie, therefore is a recommendation)
+        if (predictedMovieScore > 3.5) {
           recommendedMovies.push({
             id: movieIds[i],
             score: predictedMovieScore,
