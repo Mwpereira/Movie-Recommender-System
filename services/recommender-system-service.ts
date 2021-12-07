@@ -19,16 +19,16 @@ export default class RecommenderSystemService {
 
   // Predefined User Ratings (Randomly Generated from 0-5)
   private static randomUsersOriginalRatings: any = {
-    Alice: [3, 0, 3, 4, 4, 4, 3, 1, 5, 5],
-    Ashley: [5, 4, 5, 4, 5, 0, 3, 4, 5, 4],
-    Bob: [0, 3, 1, 2, 5, 4, 5, 2, 3, 2],
-    Cindy: [3, 2, 3, 0, 4, 3, 5, 4, 5, 4],
-    David: [4, 5, 4, 4, 2, 0, 3, 4, 5, 3],
-    Dhanayush: [5, 4, 3, 4, 3, 2, 4, 3, 3, 2],
-    Hitarth: [4, 5, 5, 3, 0, 2, 3, 5, 5, 4],
-    Michael: [5, 4, 5, 5, 5, 2, 0, 3, 5, 4],
-    Peter: [4, 3, 2, 3, 1, 3, 0, 5, 4, 5],
-    Steve: [5, 4, 5, 4, 4, 5, 4, 3, 0, 3],
+    Alice: [4, 0, 4, 3, 4, 3, 3, 1, 2, 3, 2, 2, 5, 5, 4, 5, 4, 5],
+    Ashley: [5, 4, 5, 4, 3, 5, 0, 3, 4, 2, 4, 3, 5, 4, 4, 5, 3, 1],
+    Bob: [0, 3, 2, 2, 1, 3, 5, 4, 5, 2, 3, 2, 4, 5, 4, 4, 5, 5],
+    Cindy: [4, 3, 3, 3, 4, 0, 4, 3, 5, 4, 5, 4, 2, 5, 4, 3, 4, 5],
+    David: [4, 5, 4, 4, 4, 5, 2, 0, 3, 4, 5, 3, 2, 3, 4, 3, 2, 3],
+    Dhanayush: [2, 4, 5, 4, 0, 2, 5, 4, 4, 5, 4, 2, 4, 5, 3, 4, 4, 0],
+    Hitarth: [0, 5, 5, 5, 4, 5, 0, 2, 3, 4, 5, 4, 4, 5, 3, 4, 4, 2],
+    Michael: [5, 4, 5, 5, 5, 4, 0, 4, 3, 5, 2, 5, 5, 4, 5, 4, 5, 5],
+    Peter: [4, 4, 0, 4, 5, 4, 3, 4, 2, 3, 4, 4, 0, 5, 4, 1, 4, 5],
+    Steve: [5, 4, 5, 4, 4, 5, 0, 3, 2, 2, 4, 3, 2, 4, 3, 0, 3, 4, 4],
   }
 
   // Mapping of transformed the ratings' data
@@ -150,6 +150,8 @@ export default class RecommenderSystemService {
             // Add the movie rating if they have seen the movie
             averageR += tempRandomUsersRatings[j]
             averageC += tempCurrentUsersRatings[j]
+            console.log(tempCurrentUsersRatings)
+            console.log(tempCurrentUsersRatings[j])
           }
           // Last value in the ratings array
           if (j === tempRandomUsersRatings.length - 1) {

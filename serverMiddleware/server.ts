@@ -55,7 +55,7 @@ app.post('/register', async (req, res) => {
     accounts[`${req.body.username}`] = {
       username: req.body.username,
       password: '',
-      ratings: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      ratings: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     }
 
     await bcrypt.hash(req.body.password, rounds).then((hash) => {
