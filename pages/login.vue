@@ -44,10 +44,10 @@ export default class Register extends Vue {
       username: this.username,
       password: this.password,
       db: WebStorageService.checkForData()
-    }).then(response => {
+    }).then(() => {
       WebStorageService.authorizeUser(this.username);
       BuefyService.successToast('User Authorized')
-      this.$router.push('/dashboard')
+      this.$router.push('/movies')
     }).catch(error => {
       BuefyService.dangerToast(error.response.data.error)
     })
@@ -60,7 +60,7 @@ export default class Register extends Vue {
 
   mounted() {
     if (WebStorageService.getCurrentAuthorizedUser() !== null) {
-      this.$router.push('/dashboard')
+      this.$router.push('/movies')
     }
   }
 }

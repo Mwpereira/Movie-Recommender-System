@@ -68,7 +68,7 @@ export default class Register extends Vue {
 
   mounted() {
     if (WebStorageService.getCurrentAuthorizedUser() !== null) {
-      this.$router.push('/dashboard')
+      this.$router.push('/movies')
     }
   }
 }

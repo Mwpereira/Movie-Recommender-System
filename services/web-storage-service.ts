@@ -23,6 +23,16 @@ export default class WebStorageService {
     localStorage.setItem(this.lsKey, JSON.stringify(data))
   }
 
+  public static setRatings(rating, index) {
+    const data: any = this.checkForData()
+    // @ts-ignore
+    const username: string = this.getCurrentAuthorizedUser().toString()
+    const newRatings = data.accounts[username].ratings
+    newRatings[index] = rating
+    data.accounts[username].ratings = newRatings
+    this.updateData(data)
+  }
+
   public static deleteAllData() {
     localStorage.removeItem(this.lsKey)
     sessionStorage.removeItem(this.ssKey)

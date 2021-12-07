@@ -8,20 +8,26 @@
       </template>
       <template #end>
         <b-navbar-item class='mr-4 navOptions'>
-          <NuxtLink to="/dashboard">
-            Dashboard
-          </NuxtLink>
         </b-navbar-item>
 
         <b-navbar-item class='mr-4 navOptions'>
-          <NuxtLink to="/rate">
+          <NuxtLink to="/movies">
+            Movies
+          </NuxtLink>
+        </b-navbar-item>
+        <b-navbar-item class='mr-4 navOptions'>
+          <NuxtLink to="/rate-movies">
             Rate Movies
           </NuxtLink>
         </b-navbar-item>
-
         <b-navbar-item class='mr-4 navOptions'>
-          <NuxtLink to="/calculate">
-            User CF
+          <NuxtLink to="/recommendations">
+            Recommended Film(s)
+          </NuxtLink>
+        </b-navbar-item>
+        <b-navbar-item class='mr-4 navOptions'>
+          <NuxtLink to="/calculations">
+            Calculations for User CF
           </NuxtLink>
         </b-navbar-item>
         <b-navbar-item class='mr-4 navOptions'>
@@ -43,7 +49,7 @@ import BuefyService from "~/services/buefy-service";
 @Component
 export default class TopSection extends Vue {
   get valid() {
-    return this.$route.path === '/dashboard' || this.$route.path === '/rate' || this.$route.path === '/calculate'
+    return this.$route.path === '/movies' || this.$route.path === '/rate-movies' || this.$route.path === '/recommendations' || this.$route.path === '/calculations'
   }
 
   private logout(): void {
@@ -53,3 +59,18 @@ export default class TopSection extends Vue {
   }
 }
 </script>
+
+<style scoped>
+.button {
+  font-weight: 500;
+}
+
+a {
+  color: #363636 !important;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #777 !important;
+}
+</style>
