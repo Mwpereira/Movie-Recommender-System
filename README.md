@@ -39,7 +39,15 @@ Alternatively, can use *npm* instead of yarn.
 
 ### Dependencies
 
--   _Buefy_ - for using UI components for Vue.js based on Bulma
--   _axios_ - for the promise based HTTP client to handle requests
+- _Buefy_ - for using UI components for Vue.js based on Bulma
+- _axios_ - for the promise based HTTP client to handle requests
+
+## 📷 Gallery
+<img src="static/gallery/home.png" width="500">
+<img src="static/gallery/movies.png" width="500">
+<img src="static/gallery/recommendations.png" width="500">
+<img src="static/gallery/calculations.png" width="500">
+
+View more images under the ```./static/gallery/``` directory.
 
 ## 📝 Program Details
