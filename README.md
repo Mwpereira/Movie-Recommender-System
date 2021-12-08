@@ -45,6 +45,7 @@ Alternatively, can use *npm* instead of yarn.
 ## 📷 Gallery
 <img src="static/gallery/home.png" width="900">
 <img src="static/gallery/movies.png" width="900">
+<img src="static/gallery/rate-movies.png" width="900">
 <img src="static/gallery/recommendations.png" width="900">
 <img src="static/gallery/calculations.png" width="900">
 
