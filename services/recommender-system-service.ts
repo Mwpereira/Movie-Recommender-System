@@ -3,31 +3,17 @@ import BuefyService from '~/services/buefy-service'
 import WebStorageService from '~/services/web-storage-service'
 
 export default class RecommenderSystemService {
-  // Marvel Movies
-  private static movies = [
-    'Shang-Chi and the Legend of the Ten Rings',
-    'Captain America: Civil War',
-    'Spider-Man: Homecoming',
-    'Avengers: Endgame',
-    'Parasite',
-    'Green Book',
-    'The Irish Men',
-    'Superbad',
-    'Crazy Rich Asians',
-    'Central Intelligence',
-  ]
-
   // Predefined User Ratings (Randomly Generated from 0-5)
   private static randomUsersOriginalRatings: any = {
-    Alice: [4, 0, 4, 3, 4, 3, 3, 1, 2, 3, 2, 2, 5, 5, 4, 5, 4, 5],
-    Ashley: [5, 4, 5, 4, 3, 5, 0, 3, 4, 2, 4, 3, 5, 4, 4, 5, 3, 1],
-    Bob: [0, 3, 2, 2, 1, 3, 5, 4, 5, 2, 3, 2, 4, 5, 4, 4, 5, 5],
-    Cindy: [4, 3, 3, 3, 4, 0, 4, 3, 5, 4, 5, 4, 2, 5, 4, 3, 4, 5],
-    David: [4, 5, 4, 4, 4, 5, 2, 0, 3, 4, 5, 3, 2, 3, 4, 3, 2, 3],
-    Dhanayush: [2, 4, 5, 4, 0, 2, 5, 4, 4, 5, 4, 2, 4, 5, 3, 4, 4, 0],
-    Hitarth: [0, 5, 5, 5, 4, 5, 0, 2, 3, 4, 5, 4, 4, 5, 3, 4, 4, 2],
-    Michael: [5, 4, 5, 5, 5, 4, 0, 4, 3, 5, 2, 5, 5, 4, 5, 4, 5, 5],
-    Peter: [4, 4, 0, 4, 5, 4, 3, 4, 2, 3, 4, 4, 0, 5, 4, 1, 4, 5],
+    Alice: [3, 0, 1, 2, 3, 3, 4, 3, 4, 3, 4, 3, 5, 5, 4, 5, 4, 5],
+    Ashley: [5, 4, 5, 4, 4, 5, 5, 0, 4, 3, 4, 5, 4, 2, 5, 2, 3, 1],
+    Bob: [0, 3, 2, 2, 1, 3, 5, 5, 5, 3, 3, 5, 2, 4, 3, 5, 3, 2],
+    Cindy: [3, 2, 2, 3, 3, 0, 4, 3, 5, 4, 3, 4, 2, 5, 4, 3, 4, 5],
+    David: [4, 5, 4, 4, 4, 5, 3, 0, 3, 4, 3, 3, 2, 1, 4, 3, 2, 3],
+    Dhanayush: [2, 4, 3, 4, 0, 2, 5, 4, 4, 5, 4, 2, 4, 5, 3, 4, 4, 3],
+    Hitarth: [4, 5, 4, 5, 4, 5, 0, 2, 3, 3, 4, 3, 4, 5, 3, 4, 4, 2],
+    Michael: [5, 4, 5, 5, 5, 5, 5, 0, 4, 5, 2, 4, 2, 5, 4, 5, 4, 5],
+    Peter: [5, 4, 0, 4, 3, 4, 3, 4, 2, 3, 4, 4, 0, 5, 4, 1, 4, 5],
     Steve: [5, 4, 5, 4, 4, 5, 0, 3, 2, 2, 4, 3, 2, 4, 3, 0, 3, 4],
   }
 

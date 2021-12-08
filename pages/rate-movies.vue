@@ -1,9 +1,10 @@
 <template>
   <section class='section'>
-    <div class="columns has-text-centered is-multiline">
+    <div class="columns has-text-centered is-centered is-multiline">
       <div v-for="(movie, index) in movieTitles" :key="movie" class="column is-6">
         <Movie id="card" :title="movieTitles[index]" :img-url="movieImgUrls[index]" :index="indexToId(index)"/>
       </div>
+      <NuxtLink to="/recommendations"><b-button class="is-dark m-6">View My Recommendations</b-button></NuxtLink>
     </div>
   </section>
 </template>
