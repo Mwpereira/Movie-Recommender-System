@@ -1,6 +1,6 @@
 <template>
   <section class="section box has-text-centered">
-    <img :src="imgUrl" width="300px" height="500px" :alt="title"/>
+    <img :src="imgUrl" width="200px" height="350px" :alt="title"/>
     <h2 class="title is-size-5 m-6">{{ title }}</h2>
     <p class="my-6 is-flex">
       <span class="has-text-weight-semibold">Moving Rating:</span>

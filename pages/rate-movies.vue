@@ -68,8 +68,8 @@ export default class RateMovies extends Vue {
 }
 </script>
 
-<style>
-#card {
-  height: 755px !important;
-}
-</style>
+<!--<style>-->
+<!--#card {-->
+<!--  height: 500px !important;-->
+<!--}-->
+<!--</style>-->
