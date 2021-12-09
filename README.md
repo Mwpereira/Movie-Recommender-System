@@ -57,6 +57,56 @@ View more images under the ```./static/gallery/``` directory.
 
 - We made use of the collaborative filtering method to recommend relevant movies to the user based on the similarity score and by using the formula to predict the rating that user would give for the movie. 
 - User-Based Collaborative Filtering is a technique for predicting which products a user would enjoy based on the ratings provided to that item by other users with similar tastes to the target user.
-- Pearson correlation was used to calculate similarity s<img width="586" alt="Screen Shot 2021-12-09 at 3 45 10 PM" src="https://user-images.githubusercontent.com/20516641/145472932-74a6b289-5f22-40ae-8866-faabcf00bd0a.png">
-cores as follows:
+- Pearson correlation was used to calculate similarity scores as follows:
+<img width="586" alt="Screen Shot 2021-12-09 at 3 45 10 PM" src="https://user-images.githubusercontent.com/20516641/145472932-74a6b289-5f22-40ae-8866-faabcf00bd0a.png">
+
+### Main functions/methods used 
+
+- User Rating and Mapping 
+This is used to declare random initial ratings that map to the relevant movies (this can set up initial recommendations, and it changes later on as new users are signing up and rating movies)
+
+```
+  // Predefined User Ratings (Randomly Generated from 0-5)
+  private static randomUsersOriginalRatings: any = {
+    Alice: [3, 0, 1, 2, 3, 3, 4, 3, 4, 3, 4, 3, 5, 5, 4, 5, 4, 5],
+    Ashley: [5, 4, 5, 4, 4, 5, 5, 0, 4, 3, 4, 5, 4, 2, 5, 2, 3, 1],
+    Bob: [0, 3, 2, 2, 1, 3, 5, 5, 5, 3, 3, 5, 2, 4, 3, 5, 3, 2],
+  }
+  
+   // Mapping of transformed the ratings' data
+  // Each predefined user is denoted as a 'random user'
+  private static usersRatingsMap: any = {
+    Alice: {
+      name: 'Alice',
+      randomUsersAverage: 0,
+      randomUsersRatings: [],
+      currentUsersAverage: 0,
+      currentUsersRatings: [],
+      similarityScore: 0,
+    }
+```
+- calculateUserCF
+This is the main function that calculates the similarity scores and determines the predictive movies. The main steps are as follows
+1) Calculate the Average of Each Person
+```
+const users = Object.keys(this.usersRatingsMap)
+```
+2)Hold array of similarity scores
+```
+const similarityScoreRanking: SimilarityScores[] = []
+```
+3)Calculate Similarity Scores
+4)Must be greater than 3.5 (a rating of 3.5-5 means the user likes the movie, therefore is a recommendation)
+```
+ if (predictedMovieScore > 3.5) {
+          recommendedMovies.push({
+            id: movieIds[i],
+            score: predictedMovieScore,
+     })
+ }
+ ```
+        
+
+
+
 
