@@ -107,7 +107,7 @@ const similarityScoreRanking: SimilarityScores[] = []
  ```
 - Movie Dataset Information
 This is used to store the sample diverse movie dataset (17 movies in total to maintain performance and loading speed)
-1) An array is used to store the movies as constant variable (the movie name and their cover image)
+1)An array is used to store the movies as constant variable (the movie name and their cover image)
 ```
 export const movies = [
   'Shang-Chi and the Legend of the Ten Rings',
