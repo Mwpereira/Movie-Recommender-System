@@ -87,7 +87,7 @@ This is used to declare random initial ratings that map to the relevant movies (
 ```
 - calculateUserCF
 This is the main function that calculates the similarity scores and determines the predictive movies. The main steps are as follows
-1) Calculate the Average of Each Person
+1)Calculate the Average of Each Person
 ```
 const users = Object.keys(this.usersRatingsMap)
 ```
@@ -105,7 +105,57 @@ const similarityScoreRanking: SimilarityScores[] = []
      })
  }
  ```
-        
+- Movie Dataset Information
+This is used to store the sample diverse movie dataset (17 movies in total to maintain performance and loading speed)
+1) An array is used to store the movies as constant variable (the movie name and their cover image)
+```
+export const movies = [
+  'Shang-Chi and the Legend of the Ten Rings',
+  'Captain America: Civil War',
+  'Spider-Man: Homecoming',
+]
+```
+```
+export const movieImgUrls = [
+  'https://mx.web.img3.acsta.net/pictures/21/08/10/10/22/2091196.jpg',
+  'https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_.jpg',
+```
+- Login/Register
+This is used to create the login and register page for users to login and create new account to rate movies respectively. Made use of live password checklist to make sure that the user selects a secure password.
+```
+export default class Register extends Vue {
+  private username: string = '';
+  private password: string = '';
+
+  private async login() {
+    await BuefyService.startLoading()
+    await axios.post('/login', {
+      username: this.username,
+      password: this.password,
+      db: WebStorageService.checkForData()
+    }).then(() => {
+      WebStorageService.authorizeUser(this.username);
+      BuefyService.successToast('User Authorized')
+      this.$router.push('/movies')
+    }).catch(error => {
+      BuefyService.dangerToast(error.response.data.error)
+    })
+    await BuefyService.stopLoading()
+  }
+
+  get invalid() {
+    return this.username.length < 3 || this.username.length > 32 || this.password.length < 3 || this.password.length > 64
+  }
+
+  mounted() {
+    if (WebStorageService.getCurrentAuthorizedUser() !== null) {
+      this.$router.push('/movies')
+    }
+  }
+}
+```
+
+
 
 
 
