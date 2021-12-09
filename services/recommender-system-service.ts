@@ -114,6 +114,7 @@ export default class RecommenderSystemService {
       // Calculate the Average of Each Person
       const users = Object.keys(this.usersRatingsMap)
 
+      // For all the random users
       for (let i = 0; i < users.length; i++) {
         const tempRandomUsersRatings = [
           ...this.randomUsersOriginalRatings[`${users[i]}`],
@@ -123,6 +124,7 @@ export default class RecommenderSystemService {
         let averageC = 0
         let averageR = 0
 
+        // Random user's rating which should include the removal of movies they and the current user have not watched
         for (let j = 0; j < tempRandomUsersRatings.length; j++) {
           // If one of the users have no seen movie i
           if (
@@ -144,6 +146,7 @@ export default class RecommenderSystemService {
             averageC /= tempCurrentUsersRatings.length
           }
         }
+        // Adding essential data
         this.usersRatingsMap[`${users[i]}`].randomUsersAverage = parseFloat(
           averageR.toFixed(3)
         )
@@ -196,6 +199,7 @@ export default class RecommenderSystemService {
             denominatorFinal = Math.sqrt(demC * demR)
           }
         }
+        // Produces final out of the similarity score
         if (denominatorFinal === 0) {
           this.usersRatingsMap[`${users[i]}`].similarityScore = 0
         } else {
@@ -203,7 +207,7 @@ export default class RecommenderSystemService {
             (numerator / denominatorFinal).toFixed(3)
           )
         }
-
+        // Saving similarity scores above 0 to consider for movie recommendations for the current user
         if (this.usersRatingsMap[`${users[i]}`].similarityScore > 0) {
           similarityScoreRanking.push({
             name: users[i],
