@@ -87,6 +87,7 @@ This is used to declare random initial ratings that map to the relevant movies (
 ```
 - calculateUserCF
 This is the main function that calculates the similarity scores and determines the predictive movies.
+
 1)Calculate the Average of Each Person
 ```
 const users = Object.keys(this.usersRatingsMap)
