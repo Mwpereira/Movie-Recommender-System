@@ -57,8 +57,15 @@ View more images under the ```./static/gallery/``` directory.
 
 - We made use of the collaborative filtering method to recommend relevant movies to the user based on the similarity score and by using the formula to predict the rating that user would give for the movie. 
 - User-Based Collaborative Filtering is a technique for predicting which products a user would enjoy based on the ratings provided to that item by other users with similar tastes to the target user.
-- Pearson correlation was used to calculate similarity scores as follows:
-<img width="586" alt="Screen Shot 2021-12-09 at 3 45 10 PM" src="https://user-images.githubusercontent.com/20516641/145472932-74a6b289-5f22-40ae-8866-faabcf00bd0a.png">
+- Firstly, we made use of average aggregate function to determine the averages of user ratings as follows:
+![Screen Shot 2021-12-10 at 6 13 30 PM](https://user-images.githubusercontent.com/20516641/145652646-23230f87-2114-489d-a255-770a806213f9.png)
+
+- Secondly, for the similarity score calculation we used the average based formula as follows:
+Sim(X,Y) = Numerator/Denominator
+
+- Lastly, we made use of predictive rating formula to predict the rating of the movie by the user, and pass it through the threshold:
+R(X, Runknown) = (sim(X, A)*r(A, Rknown) + sim(X, D)*r(D, Rknown))/(sim..+sim..)
+
 
 ### Main functions/methods used 
 
