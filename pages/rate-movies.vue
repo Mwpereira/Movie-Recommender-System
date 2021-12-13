@@ -49,11 +49,11 @@ export default class RateMovies extends Vue {
       case 2:
         return 4
       case 3:
-        return 6
-      case 4:
         return 9
-      case 5:
+      case 4:
         return 11
+      case 5:
+        return 6
       case 6:
         return 12
       case 7:
