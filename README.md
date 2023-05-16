@@ -96,16 +96,16 @@ This is used to declare random initial ratings that map to the relevant movies (
 
 This is the main function that calculates the similarity scores and determines the predictive movies.
 
-1)Calculate the Average of Each Person
+1) Calculate the Average of Each Person
 ```
 const users = Object.keys(this.usersRatingsMap)
 ```
-2)Hold array of similarity scores
+2) Hold array of similarity scores
 ```
 const similarityScoreRanking: SimilarityScores[] = []
 ```
-3)Calculate Similarity Scores
-4)Must be greater than 3.5 (a rating of 3.5-5 means the user likes the movie, therefore is a recommendation)
+3) Calculate Similarity Scores
+4) Must be greater than 3.5 (a rating of 3.5-5 means the user likes the movie, therefore is a recommendation)
 ```
  if (predictedMovieScore > 3.5) {
           recommendedMovies.push({
